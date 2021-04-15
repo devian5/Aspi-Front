@@ -2,7 +2,7 @@ version: "3.5"
 services: 
     app:
       build: ./app
-      container_name: geekflix_node
+      container_name: aspi
       volumes: 
         - ./app:/app
         - /app/node_modules

@@ -1,0 +1,128 @@
+body {
+    .btn-dark {
+        margin-right: 1.15em;
+        margin-bottom: 5em;
+
+        border: none;
+        background-color: $lightblue;
+    }
+    
+}
+
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    
+    background-color: $gray;
+
+    .homeHeader {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 1em;
+        height: 128px;
+        width: 100%;
+
+        // background-color: blue;
+        
+        // .btn-dark {
+        //     margin-right: 1em;
+        //     margin-bottom: 5em;
+        //     border: none;
+        //     background-color: $lightblue;
+        // }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            // background-color: brown;
+            height: 8em;
+            width: 6em;
+            cursor: pointer;
+            margin-top: 0.6em;
+
+        }
+    }
+
+    .homeBody {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        margin-top: 1em;
+        margin-bottom: 2em;
+        
+        .description {
+            display: flex;
+            margin: 2em;
+            width: 25em;
+            height: 10em;
+        }
+
+        .imageBody {
+            display: flex;
+            width: 244px;
+            height: 15em;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .homeHeader {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            margin-right: 1em;
+            height: 80px;
+            width: 100%;
+
+            .logo {
+                display: flex;
+                justify-content: center;
+                margin-left: 0.3em;
+                // background-color: brown;
+                height: 5em;
+                width: 3em;
+                cursor: pointer;
+    
+            }
+
+            .btn-dark {
+                margin-right: 0.8em;
+                margin-bottom: 2em;
+        
+                border: none;
+                background-color: $lightblue;
+            }
+    
+            // background-color: blue;
+        }
+
+        .homeBody {
+            display: grid;
+            grid-template-columns: repeat(1, auto);
+            justify-content: center;
+            margin-top: 1em;
+            margin-bottom: 2em;
+            
+            .description {
+                display: flex;
+                margin: 2em;
+                width: 18em;
+                height: 11em;
+            }
+            
+            .imageBody {
+                display: flex;
+                justify-content: center;
+                margin-left: 3.3em;
+                width: 245px;
+                height: 10em;
+            }
+        }
+    
+     
+    }
+
+}

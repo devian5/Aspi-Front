@@ -1,0 +1,82 @@
+/*Colors*/
+/*Sizes*/
+/*Margin and Padding*/
+body .btn-dark {
+  margin-right: 1.15em;
+  margin-bottom: 5em;
+  border: none;
+  background-color: #71adb5; }
+
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: #d8dfe2; }
+  .homeContainer .homeHeader {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 1em;
+    height: 128px;
+    width: 100%; }
+    .homeContainer .homeHeader .logo {
+      display: flex;
+      justify-content: center;
+      height: 8em;
+      width: 6em;
+      cursor: pointer;
+      margin-top: 0.6em; }
+  .homeContainer .homeBody {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin-top: 1em;
+    margin-bottom: 2em; }
+    .homeContainer .homeBody .description {
+      display: flex;
+      margin: 2em;
+      width: 25em;
+      height: 10em; }
+    .homeContainer .homeBody .imageBody {
+      display: flex;
+      width: 244px;
+      height: 15em; }
+  @media screen and (max-width: 400px) {
+    .homeContainer .homeHeader {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      margin-right: 1em;
+      height: 80px;
+      width: 100%; }
+      .homeContainer .homeHeader .logo {
+        display: flex;
+        justify-content: center;
+        margin-left: 0.3em;
+        height: 5em;
+        width: 3em;
+        cursor: pointer; }
+      .homeContainer .homeHeader .btn-dark {
+        margin-right: 0.8em;
+        margin-bottom: 2em;
+        border: none;
+        background-color: #71adb5; }
+    .homeContainer .homeBody {
+      display: grid;
+      grid-template-columns: repeat(1, auto);
+      justify-content: center;
+      margin-top: 1em;
+      margin-bottom: 2em; }
+      .homeContainer .homeBody .description {
+        display: flex;
+        margin: 2em;
+        width: 18em;
+        height: 11em; }
+      .homeContainer .homeBody .imageBody {
+        display: flex;
+        justify-content: center;
+        margin-left: 3.3em;
+        width: 245px;
+        height: 10em; } }
