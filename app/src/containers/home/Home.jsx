@@ -10,7 +10,10 @@ const Home = () => {
                 <div className="logo">
                     <img src={logo} alt="logo"/>
                 </div>
-                <button type="button" class="btn btn-dark btn-sm">Inicio sesión</button>
+                <div className="buttonsHome">
+                    <button type="button" class="btn btn-dark btn-sm">Registrate</button>
+                    <button type="button" class="btn btn-dark btn-sm">Inicio sesión</button>
+                </div>
             </div>
             <div className="homeBody">
                 <div className="description">
@@ -22,9 +25,9 @@ const Home = () => {
                     <img src={asperger} alt="asperger"/>
                 </div>
             </div>
-            <div className="register">
+            {/* <div className="register">
                 <button type="button" class="btn btn-dark btn-lg">Registrarse</button>
-            </div>
+            </div> */}
             
         </div>
     )

@@ -21,6 +21,10 @@ body .btn-dark {
     margin-right: 1em;
     height: 128px;
     width: 100%; }
+    .homeContainer .homeHeader .buttonsHome {
+      display: flex;
+      width: 50%;
+      justify-content: end; }
     .homeContainer .homeHeader .logo {
       display: flex;
       justify-content: center;

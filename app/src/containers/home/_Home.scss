@@ -5,8 +5,7 @@ body {
 
         border: none;
         background-color: $lightblue;
-    }
-    
+    }    
 }
 
 .homeContainer {
@@ -26,14 +25,11 @@ body {
         height: 128px;
         width: 100%;
 
-        // background-color: blue;
-        
-        // .btn-dark {
-        //     margin-right: 1em;
-        //     margin-bottom: 5em;
-        //     border: none;
-        //     background-color: $lightblue;
-        // }
+        .buttonsHome {
+            display: flex;
+            width: 50%;
+            justify-content: end;
+        }
 
         .logo {
             display: flex;
