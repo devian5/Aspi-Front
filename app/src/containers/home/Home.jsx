@@ -2,7 +2,8 @@ import React from 'react'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../../img/logo.png';
-import asperger from '../../img/asperger.png'
+import asperger from '../../img/asperger.png';
+
 const Home = () => {
     return (
         <div className='homeContainer'>
@@ -25,10 +26,18 @@ const Home = () => {
                     <img src={asperger} alt="asperger"/>
                 </div>
             </div>
-            {/* <div className="register">
-                <button type="button" class="btn btn-dark btn-lg">Registrarse</button>
-            </div> */}
-            
+            <div className="footerHome">
+                <div className="textFooter">
+                    <div>
+                        App de ian
+
+                    </div>
+                    <div>
+                        App registrada©
+
+                    </div>
+                </div>
+            </div>            
         </div>
     )
 }
