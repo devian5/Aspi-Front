@@ -3,8 +3,30 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../../img/logo.png';
 import asperger from '../../img/asperger.png';
+import { useHistory } from 'react-router';
+
+
+
+
 
 const Home = () => {
+    
+    const history = useHistory();
+
+    const redirectLogin = () => {
+        // return setTimeout(() => {
+        //   history.push('/login')
+        // }, 1000);
+        console.log('esto hace login');
+    };
+    
+    const redirectRegister = () => {
+        return setTimeout(() => {
+          history.push('/register')
+        }, 1000);
+        console.log('esto hace register');
+    };
+
     return (
         <div className='homeContainer'>
             <div className='homeHeader'> 
@@ -12,8 +34,8 @@ const Home = () => {
                     <img src={logo} alt="logo"/>
                 </div>
                 <div className="buttonsHome">
-                    <button type="button" class="btn btn-dark btn-sm">Registrate</button>
-                    <button type="button" class="btn btn-dark btn-sm">Inicio sesión</button>
+                    <button type="button" class="btn btn-dark btn-sm" onClick={()=> redirectRegister()}>Registrate</button>
+                    <button type="button" class="btn btn-dark btn-sm" onClick={()=> redirectLogin()}>Inicio sesión</button>
                 </div>
             </div>
             <div className="homeBody">

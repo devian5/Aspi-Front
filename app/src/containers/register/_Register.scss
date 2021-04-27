@@ -1,0 +1,93 @@
+.formRegister {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 45em;
+    width: 100%;
+
+    background-color: $gray;   
+
+
+    .registerEmail {
+        margin-top: 0.5em;
+    }
+    
+    .registerPassword {
+        display: flex;
+        align-content: center;
+        margin-top: 0.5em;
+
+    }
+
+    .registerInput {
+        margin-top: 0.8em;
+        border-radius: 0.2em;
+        // margin-bottom: 1em;
+
+    }
+
+    .registerBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+        width: 100%;
+
+
+        .btn-success {
+            border: none;
+            background-color: $lightblue;
+        }    
+    
+    }
+}    
+
+@media screen and (max-width: 400px) {
+    .formRegister {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+        height: 51em;
+        width: 100%;
+    
+        background-color: $gray; 
+        .registerEmail {
+            margin-top: 0.5em;
+        }
+    
+        .registerPassword {
+            display: flex;
+            align-content: center;
+            margin-top: 0.5em;
+
+        }
+
+        .registerInput {
+            margin-top: 0.8em;
+            border-radius: 0.2em;
+            // margin-bottom: 1em;
+
+        }
+
+        .registerBtn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1em;
+            width: 100%;
+
+
+            .btn-success {
+                border: none;
+                background-color: $lightblue;
+            }    
+        
+        }
+    } 
+
+}
+

@@ -121,3 +121,58 @@ body .btn-dark {
         align-items: center;
         justify-content: space-around;
         color: #d8dfe2; } }
+
+.formRegister {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 45em;
+  width: 100%;
+  background-color: #d8dfe2; }
+  .formRegister .registerEmail {
+    margin-top: 0.5em; }
+  .formRegister .registerPassword {
+    display: flex;
+    align-content: center;
+    margin-top: 0.5em; }
+  .formRegister .registerInput {
+    margin-top: 0.8em;
+    border-radius: 0.2em; }
+  .formRegister .registerBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    width: 100%; }
+    .formRegister .registerBtn .btn-success {
+      border: none;
+      background-color: #71adb5; }
+
+@media screen and (max-width: 400px) {
+  .formRegister {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 51em;
+    width: 100%;
+    background-color: #d8dfe2; }
+    .formRegister .registerEmail {
+      margin-top: 0.5em; }
+    .formRegister .registerPassword {
+      display: flex;
+      align-content: center;
+      margin-top: 0.5em; }
+    .formRegister .registerInput {
+      margin-top: 0.8em;
+      border-radius: 0.2em; }
+    .formRegister .registerBtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1em;
+      width: 100%; }
+      .formRegister .registerBtn .btn-success {
+        border: none;
+        background-color: #71adb5; } }
