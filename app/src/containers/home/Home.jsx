@@ -14,17 +14,15 @@ const Home = () => {
     const history = useHistory();
 
     const redirectLogin = () => {
-        // return setTimeout(() => {
-        //   history.push('/login')
-        // }, 1000);
-        console.log('esto hace login');
+        return setTimeout(() => {
+          history.push('/login')
+        }, 1000);
     };
     
     const redirectRegister = () => {
         return setTimeout(() => {
           history.push('/register')
         }, 1000);
-        console.log('esto hace register');
     };
 
     return (

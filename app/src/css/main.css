@@ -122,57 +122,171 @@ body .btn-dark {
         justify-content: space-around;
         color: #d8dfe2; } }
 
-.formRegister {
+.register {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 45em;
+  min-height: 100vh;
   width: 100%;
   background-color: #d8dfe2; }
-  .formRegister .registerEmail {
-    margin-top: 0.5em; }
-  .formRegister .registerPassword {
+  .register .logoRegister {
     display: flex;
-    align-content: center;
-    margin-top: 0.5em; }
-  .formRegister .registerInput {
-    margin-top: 0.8em;
-    border-radius: 0.2em; }
-  .formRegister .registerBtn {
+    justify-content: start;
+    height: 8em;
+    width: 100%;
+    margin-top: 0.6em; }
+    .register .logoRegister .logoRgt {
+      cursor: pointer; }
+  .register .formRegister {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1em;
-    width: 100%; }
-    .formRegister .registerBtn .btn-success {
-      border: none;
-      background-color: #71adb5; }
-
-@media screen and (max-width: 400px) {
-  .formRegister {
-    display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 51em;
+    height: 45em;
     width: 100%;
     background-color: #d8dfe2; }
-    .formRegister .registerEmail {
+    .register .formRegister .registerEmail {
       margin-top: 0.5em; }
-    .formRegister .registerPassword {
+    .register .formRegister .registerPassword {
       display: flex;
       align-content: center;
       margin-top: 0.5em; }
-    .formRegister .registerInput {
+    .register .formRegister .registerInput {
       margin-top: 0.8em;
       border-radius: 0.2em; }
-    .formRegister .registerBtn {
+    .register .formRegister .registerBtn {
       display: flex;
       justify-content: center;
       align-items: center;
       margin-top: 1em;
       width: 100%; }
-      .formRegister .registerBtn .btn-success {
+      .register .formRegister .registerBtn .btn-success {
         border: none;
-        background-color: #71adb5; } }
+        background-color: #71adb5; }
+
+@media screen and (max-width: 400px) {
+  .register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50.5em;
+    width: 100%;
+    background-color: #d8dfe2; }
+    .register .logoRegister {
+      display: flex;
+      justify-content: start;
+      height: 8em;
+      width: 100%;
+      cursor: pointer;
+      margin-top: 0.6em; }
+    .register .formRegister {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 45em;
+      width: 100%;
+      background-color: #d8dfe2; }
+      .register .formRegister .registerEmail {
+        margin-top: 0.5em; }
+      .register .formRegister .registerPassword {
+        display: flex;
+        align-content: center;
+        margin-top: 0.5em; }
+      .register .formRegister .registerInput {
+        margin-top: 0.8em;
+        border-radius: 0.2em; }
+      .register .formRegister .registerBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+        width: 100%; }
+        .register .formRegister .registerBtn .btn-success {
+          border: none;
+          background-color: #71adb5; } }
+
+.login {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #d8dfe2; }
+  .login .logoLogin {
+    display: flex;
+    justify-content: start;
+    height: 8em;
+    width: 100%;
+    margin-top: 0.6em; }
+    .login .logoLogin .logoLgn {
+      cursor: pointer; }
+  .login .cardLogin {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 45em;
+    width: 100%;
+    background-color: #d8dfe2; }
+    .login .cardLogin .passwordLogin {
+      margin-top: 1em; }
+    .login .cardLogin .loginInput {
+      margin-top: 0.8em;
+      border-radius: 0.2em; }
+    .login .cardLogin .createAccount {
+      margin-top: 1em; }
+    .login .cardLogin .loginBtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1em;
+      width: 100%; }
+      .login .cardLogin .loginBtn .btn-success {
+        border: none;
+        background-color: #71adb5; }
+    .login .cardLogin .createAccount {
+      color: #050505;
+      cursor: pointer; }
+    .login .cardLogin .createAccount:local-link {
+      color: #021bf8; }
+
+@media screen and (max-width: 400px) {
+  .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50.5em;
+    width: 100%;
+    background-color: #d8dfe2; }
+    .login .logoLogin {
+      display: flex;
+      justify-content: start;
+      height: 8em;
+      width: 100%;
+      cursor: pointer;
+      margin-top: 0.6em; }
+    .login .cardLogin {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 45em;
+      width: 100%;
+      background-color: #d8dfe2; }
+      .login .cardLogin .passwordLogin {
+        margin-top: 1em; }
+      .login .cardLogin .loginInput {
+        margin-top: 0.8em;
+        border-radius: 0.2em; }
+      .login .cardLogin .createAccount {
+        margin-top: 1em; }
+      .login .cardLogin .loginBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+        width: 100%; }
+        .login .cardLogin .loginBtn .btn-success {
+          border: none;
+          background-color: #71adb5; } }
