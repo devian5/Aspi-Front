@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import axios from 'axios';
+import { connect } from 'react-redux';
+import { LOGIN } from "../../redux/types/userTypes";
+
+
 
 import logo from '../../img/logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const Login = () => {
+const Login = (props) => {
 
     const [user, setUser] = useState({
         email : '',
@@ -22,8 +26,10 @@ const Login = () => {
     const history = useHistory();
 
     const sendData = async () => {
-        const res = await axios.post('http://localhost:3000/user/login', user)
-        console.log(res);
+        const result = await axios.post('http://localhost:3000/user/login', user)
+        console.log(result);
+        props.dispatch({type: LOGIN, payload: result.data});
+
         console.log('LOGIN');
     };
 
@@ -77,4 +83,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default connect()(Login);
