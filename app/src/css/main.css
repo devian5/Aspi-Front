@@ -290,3 +290,25 @@ body .btn-dark {
         .login .cardLogin .loginBtn .btn-success {
           border: none;
           background-color: #71adb5; } }
+
+.profile {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #d8dfe2; }
+  .profile .bg-light {
+    display: flex;
+    width: 100%;
+    background-color: #d8dfe2; }
+    .profile .bg-light .container-fluid .logoProfile {
+      display: flex;
+      justify-content: start;
+      height: 5em;
+      width: 8em; }
+      .profile .bg-light .container-fluid .logoProfile .logoPfl {
+        cursor: pointer; }
+    .profile .bg-light .container-fluid .collapse .navbar-nav .nav-item {
+      margin-left: 7em; }
+    .profile .bg-light .container-fluid .collapse .d-flex {
+      margin-left: 8em; }
