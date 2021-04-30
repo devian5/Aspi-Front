@@ -291,24 +291,26 @@ body .btn-dark {
           border: none;
           background-color: #71adb5; } }
 
-.profile {
+.nvb {
   display: flex;
   width: 100%;
-  min-height: 100vh;
   flex-direction: column;
   background-color: #d8dfe2; }
-  .profile .bg-light {
+  .nvb .bg-light {
     display: flex;
     width: 100%;
     background-color: #d8dfe2; }
-    .profile .bg-light .container-fluid .logoProfile {
+    .nvb .bg-light .container-fluid .logoProfile {
       display: flex;
       justify-content: start;
       height: 5em;
       width: 8em; }
-      .profile .bg-light .container-fluid .logoProfile .logoPfl {
+      .nvb .bg-light .container-fluid .logoProfile .logoPfl {
         cursor: pointer; }
-    .profile .bg-light .container-fluid .collapse .navbar-nav .nav-item {
+    .nvb .bg-light .container-fluid .collapse .navbar-nav .nav-item {
       margin-left: 7em; }
-    .profile .bg-light .container-fluid .collapse .d-flex {
+    .nvb .bg-light .container-fluid .collapse .d-flex {
       margin-left: 8em; }
+
+.modalProfile .btn-primary {
+  background-color: #176d81; }

@@ -4,7 +4,7 @@ import logo from '../../img/logo.png';
 
 const Navbar = () => {
     return (
-        <div className="profile">
+        <div className="nvb">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <div className="logoProfile">
