@@ -7,6 +7,7 @@ import Profile from './containers/profile/Profile';
 
 import './App.css';
 import './css/main.css';
+import DoubleMeaning from './containers/doubleMeaning/DoubleMeaning';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='/register' exact component={Register}/>
         <Route path='/login' exact component={Login}/>
         <Route path='/profile' exact component={Profile}/>
+        <Route path='/double-meaning' exact component={DoubleMeaning}/>
       </Switch>
 
     </BrowserRouter>
