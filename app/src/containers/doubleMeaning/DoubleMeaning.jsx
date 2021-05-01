@@ -97,7 +97,7 @@ const DoubleMeaning = (props) => {
                     name="explore"
                     type="search"
                 >Buscar</Search>
-            
+
             </div>
         )
 
@@ -106,7 +106,7 @@ const DoubleMeaning = (props) => {
 
 const mapStateToProps = state => {
     return {
-        meaning: state.meaningReducer.query
+        meaning: state.doubleMeaningReducer.query
 
     }
 }

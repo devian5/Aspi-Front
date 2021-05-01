@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import axios from 'axios';
 import { connect } from 'react-redux';
-import { LOGIN } from "../../redux/types/userTypes";
+import { LOGIN } from '../../redux/types/userTypes';
 
 
 
