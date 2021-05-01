@@ -97,7 +97,18 @@ const DoubleMeaning = (props) => {
                     name="explore"
                     type="search"
                 >Buscar</Search>
-
+                <div className="searchResult">
+                    {
+                        meaning.input?.map(findMeaning => {
+                            return(
+                                <div key={findMeaning._id}>
+                                    <div className="expression">Expresión: {findMeaning.expression}</div>
+                                    <div className="meaning"> Explicación: {findMeaning.meaning}</div>
+                                </div>
+                            )
+                        })                        
+                    }
+                </div>
             </div>
         )
 
