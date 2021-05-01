@@ -2,7 +2,7 @@ import React from 'react';
 
 import logo from '../../img/logo.png';
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
         <div className="nvb">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -21,11 +21,11 @@ const Navbar = () => {
                             <a class="nav-link" href="#">Emociones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Frases hechas</a>
+                            <a class="nav-link" href="/double-meaning">Frases hechas</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
+                                Desplegable
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="/">Calendario</a></li>
