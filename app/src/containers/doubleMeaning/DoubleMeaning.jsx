@@ -6,6 +6,7 @@ import { SEARCH } from '../../redux/types/meaningTypes';
 
 
 import Search from '../../components/search/Search';
+import Board from '../../components/board/Board';
 
 const DoubleMeaning = (props) => {
 
@@ -32,11 +33,6 @@ const DoubleMeaning = (props) => {
 
     };
 
-    // const stateSearchHandler = (event) => {
-    //     setMeaning({...meaning, [event.target.name]: event.target.type === "number" ? +event.target.value : event.target.value});
-    // };
-
-
     const handleOnKeyDown = ( event ) => {
         if(event.keyCode === 13) searchEngine()
     };
@@ -54,9 +50,6 @@ const DoubleMeaning = (props) => {
 
     };
 
-    // console.log(search.explore,'ESTO ES SEARCH!');
-    
-    
     const searchEngine = () => {
         console.log(props.meaning,'Esto son las props');
         const arraySearch = props.meaning.filter(find =>
@@ -74,7 +67,8 @@ const DoubleMeaning = (props) => {
     };
     
     console.log(meaning.input,'YEAH!');
-    if(!meaning.input){
+
+    if(meaning.input.length === 0){
         return (
             <div>
             <Search
@@ -83,7 +77,8 @@ const DoubleMeaning = (props) => {
                 onKeyDown={handleOnKeyDown}
                 name="explore"
                 type="search"
-                >Buscar</Search>
+                >Buscar
+            </Search>
             </div> 
         )
     }else{
@@ -96,15 +91,17 @@ const DoubleMeaning = (props) => {
                     onKeyDown={handleOnKeyDown}
                     name="explore"
                     type="search"
-                >Buscar</Search>
+                    >Buscar
+                </Search>
                 <div className="searchResult">
                     {
                         meaning.input?.map(findMeaning => {
                             return(
-                                <div key={findMeaning._id}>
-                                    <div className="expression">Expresión: {findMeaning.expression}</div>
-                                    <div className="meaning"> Explicación: {findMeaning.meaning}</div>
-                                </div>
+                                <Board
+                                    expression={findMeaning.expression}
+                                    meaning={findMeaning.meaning}
+                                >Doble sentido
+                                </Board>
                             )
                         })                        
                     }

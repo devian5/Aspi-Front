@@ -314,3 +314,32 @@ body .btn-dark {
 
 .modalProfile .btn-primary {
   background-color: #176d81; }
+
+.searchNav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 0.5em; }
+  .searchNav .container-fluid {
+    display: flex;
+    align-content: flex-start; }
+    .searchNav .container-fluid .form-control {
+      display: flex;
+      width: 58em; }
+    .searchNav .container-fluid .searchBtn {
+      margin-left: 0.4em; }
+
+@media screen and (max-width: 400px) {
+  .searchNav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 0.5em; }
+    .searchNav .container-fluid {
+      display: flex;
+      align-items: flex-start; }
+      .searchNav .container-fluid .form-control {
+        display: flex;
+        width: 75%; } }
