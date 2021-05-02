@@ -1,0 +1,14 @@
+.board {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    margin-bottom: 0.5em;
+
+    .card {
+        display: flex;
+        width: 50%;
+
+    }
+}

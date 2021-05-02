@@ -343,3 +343,13 @@ body .btn-dark {
       .searchNav .container-fluid .form-control {
         display: flex;
         width: 75%; } }
+
+.board {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 0.5em; }
+  .board .card {
+    display: flex;
+    width: 50%; }
