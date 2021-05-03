@@ -7,6 +7,7 @@ import { SEARCH } from '../../redux/types/meaningTypes';
 
 import Search from '../../components/search/Search';
 import Board from '../../components/board/Board';
+import Navbar from '../../components/navbar/Navbar';
 
 const DoubleMeaning = (props) => {
 
@@ -71,6 +72,7 @@ const DoubleMeaning = (props) => {
     if(meaning.input.length === 0){
         return (
             <div>
+                <Navbar/>
             <Search
                 onClick={()=> searchEngine()}
                 onChange={stateHandler}
