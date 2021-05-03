@@ -1,12 +1,8 @@
 .nvb {
     display: flex;
     width: 100%;
-    // min-height: 100vh;
     flex-direction: column;
-    // height: 20em;
-    // background-color: brown;
-    background-color: $gray;
-    
+    background-color: yellow !important;
     
     .bg-light {
         display: flex;
@@ -16,29 +12,24 @@
             .logoProfile{
                 display: flex;
                 justify-content: start;
-            
-                // background-color: brown;
-
                 height: 5em;
                 width: 8em;
-                // margin-top: 0.6em;
+                
                 .logoPfl {
                     cursor: pointer;
-        
-        
                 }
             }
             .collapse {
                 .navbar-nav {
-                    .nav-item {
-                        margin-left: 7em;
-                    }
-                }
-                .d-flex{
-                    margin-left: 8em;
+                    gap:5rem;   
                 }
             }
         }
+    }
+}
+@media screen and (min-width: 375px){
+    .nvb .bg-light .container-fluid .collapse .navbar-nav{
+        gap:1rem;
 
     }
 }
