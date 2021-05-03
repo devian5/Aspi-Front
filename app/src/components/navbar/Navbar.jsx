@@ -7,10 +7,12 @@ const Navbar = (props) => {
         <div className="nvb">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <div className="logoProfile">
-                    <img src={logo} alt="logo" className="logoPfl"/>
+                <div >
+                    <a className="logoProfile" href="/profile">
+                        <img src={logo} alt="logo" href="/profile" className="logoPfl"/>
+                    </a>
+                    
                 </div>
-                {/* <a class="navbar-brand" href="/">Aspi</a> */}
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -35,11 +37,6 @@ const Navbar = (props) => {
                             </ul>
                         </li>
                         <hr/>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"></input>
-                            <hr/>
-                            <button class="btn btn-outline-success" type="submit">Buscar</button>
-                        </form>
                     </ul>
                 </div>
             </div>
