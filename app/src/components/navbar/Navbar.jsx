@@ -21,7 +21,7 @@ const Navbar = (props) => {
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             {/* <a class="nav-link active" aria-current="page" href="#">Home</a> */}
-                            <a class="nav-link" href="#">Emociones</a>
+                            <a class="nav-link" href="/feeling">Emociones</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/double-meaning">Frases hechas</a>

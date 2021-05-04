@@ -4,10 +4,11 @@ import Home from './containers/home/Home';
 import Register from './containers/register/Register';
 import Login from './containers/login/Login';
 import Profile from './containers/profile/Profile';
+import DoubleMeaning from './containers/doubleMeaning/DoubleMeaning';
+import FellingCollection from './containers/feelingCollection/FellingCollection';
 
 import './App.css';
 import './css/main.css';
-import DoubleMeaning from './containers/doubleMeaning/DoubleMeaning';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/login' exact component={Login}/>
         <Route path='/profile' exact component={Profile}/>
         <Route path='/double-meaning' exact component={DoubleMeaning}/>
+        <Route path='/feeling' exact component={FellingCollection}/>
       </Switch>
 
     </BrowserRouter>
