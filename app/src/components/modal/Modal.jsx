@@ -1,6 +1,7 @@
 import React from 'react'
 
-const Modal = () => {
+const Modal = (props) => {
+    console.log(props);
     return (
         <div className="modalProfile">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -14,14 +15,9 @@ const Modal = () => {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" aria-label="Default select example" onChange={props.onChange} name={props.name}>
                     <option selected>Selecciona una emoción</option>
-                    <option value="Felicidad">Felicidad</option>
-                    <option value="Miedo">Miedo</option>
-                    <option value="Tristeza">Tristeza</option>
-                    <option value="Asco">Asco</option>
-                    <option value="Ira">Ira</option>
-                    <option value="Sorpresa">Sorpresa</option>
+                    {props.feeling?.map(pepe => <option key={pepe._id} value={pepe.picture} >{pepe.name}</option>)}
                 </select>
                 </div>
                 <div class="modal-footer">

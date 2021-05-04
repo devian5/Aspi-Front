@@ -72,7 +72,7 @@ const DoubleMeaning = (props) => {
     if(meaning.input.length === 0){
         return (
             <div>
-                <Navbar/>
+            <Navbar/>
             <Search
                 onClick={()=> searchEngine()}
                 onChange={stateHandler}

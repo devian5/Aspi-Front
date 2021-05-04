@@ -295,7 +295,7 @@ body .btn-dark {
   display: flex;
   width: 100%;
   flex-direction: column;
-  background-color: #d8dfe2; }
+  background-color: yellow !important; }
   .nvb .bg-light {
     display: flex;
     width: 100%;
@@ -307,10 +307,12 @@ body .btn-dark {
       width: 8em; }
       .nvb .bg-light .container-fluid .logoProfile .logoPfl {
         cursor: pointer; }
-    .nvb .bg-light .container-fluid .collapse .navbar-nav .nav-item {
-      margin-left: 7em; }
-    .nvb .bg-light .container-fluid .collapse .d-flex {
-      margin-left: 8em; }
+    .nvb .bg-light .container-fluid .collapse .navbar-nav {
+      gap: 5rem; }
+
+@media screen and (min-width: 375px) {
+  .nvb .bg-light .container-fluid .collapse .navbar-nav {
+    gap: 1rem; } }
 
 .modalProfile .btn-primary {
   background-color: #176d81; }
@@ -353,3 +355,9 @@ body .btn-dark {
   .board .card {
     display: flex;
     width: 50%; }
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem; }
