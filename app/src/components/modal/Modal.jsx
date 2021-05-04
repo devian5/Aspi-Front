@@ -17,12 +17,19 @@ const Modal = (props) => {
                 <div class="modal-body">
                 <select class="form-select" aria-label="Default select example" onChange={props.onChange} name={props.name}>
                     <option selected>Selecciona una emoción</option>
-                    {props.feeling?.map(pepe => <option key={pepe._id} value={pepe.picture} >{pepe.name}</option>)}
+                    
+                    {props.feeling?.map(selected => 
+                    <option 
+                        key={selected._id} 
+                        value={selected.picture}
+                    >
+                        {selected.name}
+                    </option>)}
                 </select>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Guardar</button>
+                    <button type="button" class="btn btn-primary" onClick={props.onClick} >Guardar</button>
                 </div>
                 </div>
             </div>

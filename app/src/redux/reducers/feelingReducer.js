@@ -1,7 +1,7 @@
 import { SAVE } from '../types/feelingTypes';
 
 const initialState = {
-    feeling: []
+    query: []
 };
 
 const feelingReducer = (state = initialState, action) => {

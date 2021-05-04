@@ -86,6 +86,7 @@ const DoubleMeaning = (props) => {
     }else{
         return (
             <div >
+                <Navbar/>
                 {/* <pre>{JSON.stringify(meaning, null, 2) }</pre> */}
                 <Search
                     onClick={()=> searchEngine()}
@@ -93,7 +94,7 @@ const DoubleMeaning = (props) => {
                     onKeyDown={handleOnKeyDown}
                     name="explore"
                     type="search"
-                    >Buscar
+                >Buscar
                 </Search>
                 <div className="searchResult">
                     {

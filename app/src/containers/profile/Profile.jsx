@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import { connect } from 'react-redux';
+import { SAVE } from  '../../redux/types/feelingTypes';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navbar from '../../components/navbar/Navbar';
 import Modal from '../../components/modal/Modal';
-import CardImg from '../../components/cardImg/CardImg';
 
 const Profile = (props) => {
     console.log(props);
@@ -44,6 +44,12 @@ const Profile = (props) => {
         })
 
     };
+
+    const saveFeeling = () => {
+        const data = select.feelingSelected
+
+        props.dispatch({type: SAVE, payload: data});
+    };
     
     console.log(feeling.picture);
     if(select.feelingSelected === ''){
@@ -57,8 +63,7 @@ const Profile = (props) => {
                     name="feelingSelected"
                     onChange={stateHandler}
                 />
-                holii!
-
+                <img src={props.feeling} alt={null}/>
             </div>
         )
     }else{
@@ -66,38 +71,45 @@ const Profile = (props) => {
             <div>
                 <Navbar/>
                 <br/>
-                {/* <Modal/> */}
-
-                
                 <Modal
                     feeling={feeling.picture}
 
                     name="feelingSelected"
-                    onChange={stateHandler}                
-                />
+                    onChange={stateHandler}
+                    onClick={saveFeeling}                
+                    />
                 <img src={select.feelingSelected} alt="feeling"/>
-                
-                {/* <div className="cardFeeling">
+                {/* <Carousel
+                    feeling={feeling.picture}
+
+                    name="feelingSelected"
+                    onChange={stateHandler}                
+
+                /> */}
+                {/* <div cl1assName="cardFeeling">
                     {
                         feeling.picture?.map(image => {
-                            // return(
-                            //     <CardImg
-                                    // picture={image.picture}
-                            //     /> 
-
-                            // )
+                            return(
+                                // <CardImg
+                                //     picture={image.picture}
+                                // /> 
+                            )
                         })
 
                     }
                 </div> */}
-                
-                
-                
             </div>
         )
+    }
+}
+
+const mapStateToProps = state => {
+    return {
+        feeling: state.feelingReducer.query
 
     }
 }
 
 
-export default Profile
+
+export default connect(mapStateToProps)(Profile)
