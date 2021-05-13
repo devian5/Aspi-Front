@@ -19,13 +19,11 @@ const Profile = (props) => {
         picture: []
     });
 
-
     const [select,setSelect]=useState({
         feelingSelected: ''
 
     });
 
-    
     const stateHandler = (event) => {
         setSelect({...select, 
             [event.target.name]: event.target.type === 'number' ? +event.target.value : event.target.value});
@@ -63,7 +61,9 @@ const Profile = (props) => {
                     name="feelingSelected"
                     onChange={stateHandler}
                 />
-                <img src={props.feeling} alt={null}/>
+                <div className="imgFeeling">
+                    <img src={props.feeling} alt={null}/>
+                </div>    
             </div>
         )
     }else{
@@ -78,7 +78,9 @@ const Profile = (props) => {
                     onChange={stateHandler}
                     onClick={saveFeeling}                
                     />
-                <img src={select.feelingSelected} alt="feeling"/>
+                <div className="imgFeeling">
+                    <img src={select.feelingSelected} alt="feeling"/>
+                </div>
                 {/* <Carousel
                     feeling={feeling.picture}
 

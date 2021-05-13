@@ -291,6 +291,13 @@ body .btn-dark {
           border: none;
           background-color: #71adb5; } }
 
+.imgFeeling {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 5em; }
+
 .nvb {
   display: flex;
   width: 100%;
@@ -356,8 +363,9 @@ body .btn-dark {
     display: flex;
     width: 50%; }
 
-.card {
+.cardImgFeeling {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 15rem; }
+  justify-content: center; }
+  .cardImgFeeling .card {
+    display: flex;
+    width: 540px; }
