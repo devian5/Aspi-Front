@@ -1,4 +1,4 @@
-import { SEARCH } from '../types/meaningTypes';
+import { SEARCH, CLEAR_SEARCH } from '../types/meaningTypes';
 
 const initialState = {
     query: []
@@ -11,7 +11,8 @@ const meaningReducer = (state = initialState, action) => {
                 ...state,
                 query : action.payload
             }    
-        
+        case CLEAR_SEARCH:
+            return initialState
         default:
             return state
     }

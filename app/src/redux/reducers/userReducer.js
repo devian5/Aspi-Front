@@ -15,10 +15,7 @@ const userReducer = (state = initialState, action) => {
         token: action.payload.token 
       }
     case LOGOUT:
-      return {
-        ...state,
-        user: initialState
-      }
+      return initialState
     case UPDATE:
       return {
         ...state, 

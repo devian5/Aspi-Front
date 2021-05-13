@@ -1,4 +1,4 @@
-import { SAVE } from '../types/feelingTypes';
+import { SAVE,CLEAR } from '../types/feelingTypes';
 
 const initialState = {
     query: []
@@ -11,7 +11,9 @@ const feelingReducer = (state = initialState, action) => {
                 ...state,
                 query : action.payload
             }    
-        
+        case CLEAR:
+            return initialState
+
         default:
             return state
     }
