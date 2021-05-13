@@ -3,11 +3,21 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import Navbar from '../../components/navbar/Navbar';
 import Search from '../../components/search/Search';
+import CardImg from '../../components/cardImg/CardImg';
 
 const FellingCollection = () => {
 
     const [feelingCollection,setFeelingCollection]=useState({
         feeling: []
+    });
+
+    const [search,setSearch]=useState({
+        explore: ''
+    });
+
+
+    const [data,setData]=useState({
+        feelingResult: []
     });
 
     const stateHandler = (event) => {
@@ -16,6 +26,11 @@ const FellingCollection = () => {
 
     };
 
+    const stateSearchHandler = (event) => {
+        setSearch({...search, 
+            [event.target.name]: event.target.type === 'number' ? +event.target.value : event.target.value});
+
+    };
 
     useEffect(() => {
         getFeeling();
@@ -26,7 +41,6 @@ const FellingCollection = () => {
     const getFeeling = async () => {
 
         const result = await axios.get('http://localhost:3000/feeling');
-        console.log('result',result.data.result);
 
         setFeelingCollection({
             ...feelingCollection, feeling: result.data.result
@@ -36,25 +50,25 @@ const FellingCollection = () => {
 
     const searchEngine = () => {
         console.log(feelingCollection.feeling,'Esto es el ESTADO');
-        // const arraySearch = feelingCollection.feeling.filter(find =>
-        //     find.name.toLowerCase().includes(search.explore.toLowerCase())
-        // );
+        const arraySearch = feelingCollection.feeling.filter(find =>
+            find.name.toLowerCase().includes(search.explore.toLowerCase())
+        );
 
-        
-        // setMeaning({
-        //     ...meaning, input: arraySearch
-        // });
+        console.log(arraySearch);
 
-        // console.log(arraySearch);
-        console.log('BUSCA!');
-        
+        setData({
+            ...data, feelingResult: arraySearch
+        });
+
     };
 
     const handleOnKeyDown = ( event ) => {
         if(event.keyCode === 13) searchEngine()
     };
 
-    console.log(feelingCollection.feeling);
+
+    console.log(data.feelingResult,'SEARCH RESULT');
+    console.log(feelingCollection.feeling,'GET FEELING');
     if(feelingCollection.feeling === []){
         return(
             <div>
@@ -68,17 +82,24 @@ const FellingCollection = () => {
                 <Navbar/>
                 <Search
                     onClick={()=> searchEngine()}
-                    onChange={stateHandler}
+                    onChange={stateSearchHandler}
                     onKeyDown={handleOnKeyDown}
                     name="explore"
                     type="search"
                     >Buscar
                 </Search>
                 
-           {/* <div cl1assName="cardFeeling">
+           <div cl1assName="cardFeeling">
                     {
-                        feeling.picture?.map(image => {
+                        data.feelingResult?.map(feelingArray => {
                             return(
+
+                                <CardImg
+                                    picture={feelingArray.picture}
+                                    name={feelingArray.name}
+                                    description={feelingArray.description}
+                                    example={feelingArray.exampple}
+                                />
                                 // <CardImg
                                 //     picture={image.picture}
                                 // /> 
@@ -86,7 +107,7 @@ const FellingCollection = () => {
                             })
                             
                         }
-                    </div> */} 
+                    </div> 
             </div>
         )
 
