@@ -103,10 +103,10 @@ const FellingCollection = () => {
                                 // <CardImg
                                 //     picture={image.picture}
                                 // /> 
-                                )
-                            })
+                            )
+                        })
                             
-                        }
+                    }
                     </div> 
             </div>
         )

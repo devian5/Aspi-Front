@@ -5,6 +5,7 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import { CLEAR, SAVE } from  '../../redux/types/feelingTypes';
 import { LOGOUT } from '../../redux/types/userTypes';
+import { CLEAR_SEARCH } from '../../redux/types/meaningTypes';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -39,6 +40,7 @@ const Profile = (props) => {
 
         props.dispatch({type: LOGOUT, payload : {}});
         props.dispatch({type: CLEAR, payload : {}});
+        props.dispatch({type: CLEAR_SEARCH, payload : {}});
   
         setTimeout(()=> {
             history.push('/');
