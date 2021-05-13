@@ -34,7 +34,7 @@ const Navbar = (props) => {
                                 <li><a class="dropdown-item" href="/">Calendario</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li><hr class="dropdown-divider"></hr></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" onClick={props.onClick} href="#">Cerrar sesión</a></li>
                             </ul>
                         </li>
                         <hr/>

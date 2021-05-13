@@ -31,6 +31,10 @@ const Login = (props) => {
         props.dispatch({type: LOGIN, payload: result.data});
 
         console.log('LOGIN');
+
+        return setTimeout(() => {
+            history.push('/profile')
+        }, 1000);
     };
 
     const redirect = () => {

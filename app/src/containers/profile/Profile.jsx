@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router';
 import axios from 'axios';
+
 import { connect } from 'react-redux';
-import { SAVE } from  '../../redux/types/feelingTypes';
+import { CLEAR, SAVE } from  '../../redux/types/feelingTypes';
+import { LOGOUT } from '../../redux/types/userTypes';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -9,7 +12,9 @@ import Navbar from '../../components/navbar/Navbar';
 import Modal from '../../components/modal/Modal';
 
 const Profile = (props) => {
-    console.log(props);
+
+    const history = useHistory()
+
     useEffect(() => {
         getFeeling();
         
@@ -28,10 +33,18 @@ const Profile = (props) => {
         setSelect({...select, 
             [event.target.name]: event.target.type === 'number' ? +event.target.value : event.target.value});
             
-        };
-        
-    console.log(select.feelingSelected);
+    };
 
+    const logOut =  () => {
+
+        props.dispatch({type: LOGOUT, payload : {}});
+        props.dispatch({type: CLEAR, payload : {}});
+  
+        setTimeout(()=> {
+            history.push('/');
+        },300);
+    };
+  
     const getFeeling = async () => {
 
         const result = await axios.get('http://localhost:3000/feeling');
@@ -53,7 +66,9 @@ const Profile = (props) => {
     if(select.feelingSelected === ''){
         return(
             <div>
-                <Navbar/>
+                <Navbar
+                    onClick={logOut}
+                />
                 <br/>
                 <Modal
                     feeling={feeling.picture}
