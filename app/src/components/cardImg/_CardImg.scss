@@ -1,6 +1,10 @@
-.card {
+.cardImgFeeling{
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 15rem;
+    .card {
+        display: flex;
+        // justify-content: center;
+        // align-items: center;
+        width: 540px;
+    }
 }
