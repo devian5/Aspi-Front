@@ -4,9 +4,10 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import { LOGIN } from '../../redux/types/userTypes';
 
-
-
+import { checkError, validateFields, isValid } from '../../tools/error.handler';
+import { FormGroup, Input, Label, FormFeedback } from 'reactstrap';
 import logo from '../../img/logo.png';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -17,20 +18,44 @@ const Login = (props) => {
         password : ''        
     });
 
+    const [validation, setValidation] = useState({
+        validated: false,
+        name: null
+    });
+
     const stateHandler = (event) => {
-        setUser({...user, [event.target.name]: event.target.type === "number" ? +event.target.value : event.target.value});
-    }
+        
+        setValidation(
+            {
+                ...validation, 
+                [event.target.name]: checkError(event.target.name, event.target.value)
+            }
+        );
+        setUser(
+            {
+                ...user, 
+                [event.target.name]: event.target.type === "number" ? +event.target.value : event.target.value
+            }
+        );
+    };
 
 
 
     const history = useHistory();
 
     const sendData = async () => {
-        const result = await axios.post('http://localhost:3000/user/login', user)
-        console.log(result);
-        props.dispatch({type: LOGIN, payload: result.data});
 
-        console.log('LOGIN');
+        const validation = validateFields(user);
+
+        setValidation({...validation, validated: true});
+
+        if(!isValid(validation)){
+            return;
+        };
+
+        const result = await axios.post('http://localhost:3000/user/login', user)
+
+        props.dispatch({type: LOGIN, payload: result.data});
 
         return setTimeout(() => {
             history.push('/profile')
@@ -60,25 +85,39 @@ const Login = (props) => {
                 <img src={logo} alt="logoLogin" onClick={() => redirectToHome()} className="logoLgn"/>
             </div>
             <div className='cardLogin'>
-                <div className="emailLogin">
-                    Email :
-
-                </div>
-                <input type='text' className='loginInput' maxLength='50' placeholder="" name="email" onKeyDown={handleOnKeyDown} onChange={stateHandler}/>
-                <div className="passwordLogin">
-                    Password :
-
-                </div>
-                {/* <input className='passInput' maxLength='50' placeholder="" name="password" onKeyDown={handleOnKeyDown} onChange={stateHandler}></input> */}
-                <input className='loginInput' type="password" name="password" maxLength='50' placeholder="" onKeyDown={handleOnKeyDown} onChange={stateHandler}/>
-                {/* <div className='showPWDiv'>
-                    <input checked= {checkbox} type= 'checkbox' onChange={() => toggle()} className='showPW' name='showPS'></input>
-                    <p className='showPWText'>Show Password</p>
-                </div> */}
+                <FormGroup>
+                    <Label for="email">Email:</Label>
+                    <Input 
+                        className="registerInput" 
+                        type="email" 
+                        maxLength="50" 
+                        placeholder="name@gmail.com" 
+                        name="email" 
+                        onChange={stateHandler} 
+                        onKeyDown={handleOnKeyDown}
+                        valid={validation.validated && !validation.email}
+                        invalid={validation.validated && validation.email}
+                    />
+                    <FormFeedback>{validation.email}</FormFeedback>
+                </FormGroup>
+                <FormGroup>
+                    <Label for="password">Contraseña:</Label>
+                    <Input 
+                        className="registerInput" 
+                        type="password" 
+                        maxLength="200" 
+                        placeholder="Ex:Represent23$" 
+                        name="password" 
+                        onChange={stateHandler} 
+                        onKeyDown={handleOnKeyDown}
+                        valid={validation.validated && !validation.password}
+                        invalid={validation.validated && validation.password}
+                    />
+                    <FormFeedback>{validation.password}</FormFeedback>
+                </FormGroup>
                 <div className="loginBtn">
                     <button type="button" class="btn btn-success btn-sm" onClick={()=> sendData()}>Enviar</button>
                 </div>
-                {/* <button className='loginBtn' onClick={()=> sendData()}>Login</button> */}
                 <div onClick={() => redirect()} className='createAccount'>
                     ¿No estás registrado? Registrate aquí.
                 </div>

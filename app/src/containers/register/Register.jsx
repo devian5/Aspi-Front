@@ -51,7 +51,6 @@ const Register = () => {
         };
 
         const data = await axios.post('http://localhost:3000/user', register);
-        console.log(data,'<=========ESTO ES DATA<========');
         
         return setTimeout(() => {
             history.push('/login')
@@ -69,8 +68,6 @@ const Register = () => {
         }, 1000);
     };
 
-
-    
     return (
         <div className='register'>
             <div className="logoRegister">
