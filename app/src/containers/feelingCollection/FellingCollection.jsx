@@ -49,12 +49,10 @@ const FellingCollection = () => {
     };
 
     const searchEngine = () => {
-        console.log(feelingCollection.feeling,'Esto es el ESTADO');
+        // console.log(feelingCollection.feeling,'Esto es el ESTADO');
         const arraySearch = feelingCollection.feeling.filter(find =>
             find.name.toLowerCase().includes(search.explore.toLowerCase())
         );
-
-        console.log(arraySearch);
 
         setData({
             ...data, feelingResult: arraySearch
@@ -66,9 +64,6 @@ const FellingCollection = () => {
         if(event.keyCode === 13) searchEngine()
     };
 
-
-    console.log(data.feelingResult,'SEARCH RESULT');
-    console.log(feelingCollection.feeling,'GET FEELING');
     if(feelingCollection.feeling === []){
         return(
             <div>

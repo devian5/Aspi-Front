@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Modal = (props) => {
-    console.log(props);
+
     return (
         <div className="modalProfile">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">

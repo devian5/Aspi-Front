@@ -50,7 +50,6 @@ const Profile = (props) => {
     const getFeeling = async () => {
 
         const result = await axios.get('http://localhost:3000/feeling');
-        console.log('result',result.data.result);
 
         setFeeling({
             ...feeling, picture: result.data.result
@@ -64,7 +63,6 @@ const Profile = (props) => {
         props.dispatch({type: SAVE, payload: data});
     };
     
-    console.log(feeling.picture);
     if(select.feelingSelected === ''){
         return(
             <div>

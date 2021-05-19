@@ -2,7 +2,6 @@ import React from 'react'
 
 const CardImg = (props) => {
 
-    console.log(props);
     return (
         <div className="cardImgFeeling">
             <div class="card mb-3">

@@ -24,10 +24,6 @@ const DoubleMeaning = (props) => {
         getMeaning();
     }, []);
 
-    // const stateHandler = (event) => {
-    //     setMeaning({...meaning, [event.target.name]: event.target.value});
-    // };
-
     const stateHandler = (event) => {
         setSearch({...search, 
             [event.target.name]: event.target.type === 'number' ? +event.target.value : event.target.value});
@@ -41,7 +37,6 @@ const DoubleMeaning = (props) => {
     const getMeaning = async () => {
         
         const result = await axios.get('http://localhost:3000/double-meaning/');
-        console.log(result.data);
         
         props.dispatch({type: SEARCH, payload: result.data.result})
 
@@ -52,7 +47,7 @@ const DoubleMeaning = (props) => {
     };
 
     const searchEngine = () => {
-        console.log(props.meaning,'Esto son las props');
+        // console.log(props.meaning,'Esto son las props');
         const arraySearch = props.meaning.filter(find =>
             find.expression.toLowerCase().includes(search.explore.toLowerCase())
         );
@@ -61,14 +56,9 @@ const DoubleMeaning = (props) => {
         setMeaning({
             ...meaning, input: arraySearch
         });
-
-        console.log(arraySearch);
-        console.log('BUSCA!');
         
     };
     
-    console.log(meaning.input,'YEAH!');
-
     if(meaning.input.length === 0){
         return (
             <div>
