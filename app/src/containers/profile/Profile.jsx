@@ -37,7 +37,7 @@ const Profile = (props) => {
     };
 
     const logOut =  () => {
-
+        console.log('estoy saliendo');
         props.dispatch({type: LOGOUT, payload : {}});
         props.dispatch({type: CLEAR, payload : {}});
         props.dispatch({type: CLEAR_SEARCH, payload : {}});
@@ -84,7 +84,9 @@ const Profile = (props) => {
     }else{
         return (
             <div>
-                <Navbar/>
+                <Navbar
+                    onClick={logOut}
+                />
                 <br/>
                 <Modal
                     feeling={feeling.picture}
