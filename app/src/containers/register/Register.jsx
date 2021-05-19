@@ -50,7 +50,7 @@ const Register = () => {
             return;
         };
 
-        const data = await axios.post('http://localhost:3000/user', register);
+        const data = await axios.post('https://aspi-back.herokuapp.com/user', register);
         
         return setTimeout(() => {
             history.push('/login')

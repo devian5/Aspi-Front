@@ -36,7 +36,7 @@ const DoubleMeaning = (props) => {
 
     const getMeaning = async () => {
         
-        const result = await axios.get('http://localhost:3000/double-meaning/');
+        const result = await axios.get('https://aspi-back.herokuapp.com/double-meaning/');
         
         props.dispatch({type: SEARCH, payload: result.data.result})
 

@@ -40,7 +40,7 @@ const FellingCollection = () => {
 
     const getFeeling = async () => {
 
-        const result = await axios.get('http://localhost:3000/feeling');
+        const result = await axios.get('https://aspi-back.herokuapp.com/feeling');
 
         setFeelingCollection({
             ...feelingCollection, feeling: result.data.result

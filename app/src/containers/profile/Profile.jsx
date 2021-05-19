@@ -49,7 +49,7 @@ const Profile = (props) => {
   
     const getFeeling = async () => {
 
-        const result = await axios.get('http://localhost:3000/feeling');
+        const result = await axios.get('https://aspi-back.herokuapp.com/feeling');
 
         setFeeling({
             ...feeling, picture: result.data.result
