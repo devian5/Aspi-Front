@@ -68,7 +68,6 @@ const FellingCollection = () => {
         return(
             <div>
                 <Navbar/>
-                Holii
             </div>
         )
     }else{
@@ -82,8 +81,7 @@ const FellingCollection = () => {
                     name="explore"
                     type="search"
                     >Buscar
-                </Search>
-                
+                </Search>    
            <div cl1assName="cardFeeling">
                     {
                         data.feelingResult?.map(feelingArray => {
@@ -93,19 +91,14 @@ const FellingCollection = () => {
                                     picture={feelingArray.picture}
                                     name={feelingArray.name}
                                     description={feelingArray.description}
-                                    example={feelingArray.exampple}
+                                    example={feelingArray.example}
                                 />
-                                // <CardImg
-                                //     picture={image.picture}
-                                // /> 
                             )
-                        })
-                            
+                        })    
                     }
                     </div> 
             </div>
         )
-
     }
 }
 

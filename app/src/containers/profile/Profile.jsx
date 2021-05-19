@@ -98,25 +98,6 @@ const Profile = (props) => {
                 <div className="imgFeeling">
                     <img src={select.feelingSelected} alt="feeling"/>
                 </div>
-                {/* <Carousel
-                    feeling={feeling.picture}
-
-                    name="feelingSelected"
-                    onChange={stateHandler}                
-
-                /> */}
-                {/* <div cl1assName="cardFeeling">
-                    {
-                        feeling.picture?.map(image => {
-                            return(
-                                // <CardImg
-                                //     picture={image.picture}
-                                // /> 
-                            )
-                        })
-
-                    }
-                </div> */}
             </div>
         )
     }
